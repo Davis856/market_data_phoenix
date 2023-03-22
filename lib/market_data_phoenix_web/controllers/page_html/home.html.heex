@@ -1,0 +1,21 @@
+<.flash_group flash={@flash} />
+<div class="stonks">
+    <table>
+        <thead>
+          <tr>
+            <%= for {key, _} <- hd(@data) do %>
+              <th><%= to_string(key) %></th>
+            <% end %>
+          </tr>
+        </thead>
+        <tbody>
+          <%= for row <- @data do %>
+            <tr>
+              <%= for {_, value} <- row do %>
+                <td><%= to_string(value) %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+    </table>      
+</div>
