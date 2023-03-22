@@ -17,5 +17,7 @@ config :swoosh, api_client: Swoosh.ApiClient.Finch, finch_name: MarketDataPhoeni
 # Do not print debug messages in production
 config :logger, level: :info
 
+config :market_data_phoenix, data_file_path: "priv/static/data/data.txt"
+
 # Runtime production configuration, including reading
 # of environment variables, is done on config/runtime.exs.

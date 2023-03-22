@@ -1,9 +1,9 @@
 defmodule MarketDataPhoenixWeb.PageController do
   use MarketDataPhoenixWeb, :controller
+  @path Application.compile_env(:market_data_phoenix, :data_file_path)
 
   def home(conn, _params) do
-    path = "priv/static/data/data.txt" |> Path.expand()
-    maps = MarketDataPhoenix.main(path, "changePercent")
+    maps = MarketDataPhoenix.main(@path, "changePercent")
     render(conn, :home, data: maps)
   end
 end

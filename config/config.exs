@@ -18,8 +18,7 @@ config :market_data_phoenix, MarketDataPhoenixWeb.Endpoint,
     layout: false
   ],
   pubsub_server: MarketDataPhoenix.PubSub,
-  live_view: [signing_salt: "8FxG3CZL"],
-  path: "data/data.txt"
+  live_view: [signing_salt: "8FxG3CZL"]
 
 # Configures the mailer
 #
